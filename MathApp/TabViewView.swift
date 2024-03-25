@@ -10,17 +10,27 @@ import SwiftUI
 struct TabViewView: View {
     @State private var selection: Int = 0
     var body: some View {
-        TabView(selection: $selection){
-            EncyclopediaView().tabItem {
-                Image(systemName: "books.vertical")
-                    .environment(\.symbolVariants, .none)
-                Text("Encyclopedia")
-            }.tag(0)
-            FiguresAreaView().tabItem {
-                Image(systemName: "chart.pie")
-                    .environment(\.symbolVariants, .none)
-                Text("Area")
-            }.tag(1)
+        VStack {
+            TabView(selection: $selection){
+                Group {
+                    EncyclopediaView().tabItem {
+                        Image(systemName: "books.vertical")
+                            .environment(\.symbolVariants, .none)
+                        Text("Encyclopedia")
+                    }.tag(0)
+                    FiguresAreaView().tabItem {
+                        Image(systemName: "chart.pie")
+                            .environment(\.symbolVariants, .none)
+                        Text("Area")
+                    }.tag(1)
+                    TrainingGamesView().tabItem {
+                        Image(systemName: "brain.head.profile")
+                            .environment(\.symbolVariants, .none)
+                        Text("Area")
+                    }.tag(2)
+                }
+                .toolbarBackground(.visible, for: .tabBar)
+            }
         }
     }
 }

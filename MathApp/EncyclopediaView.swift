@@ -9,10 +9,13 @@ import SwiftUI
 
 struct EncyclopediaView: View {
     var body: some View {
-        Text("Encyclopedia")
+        VStack {
+            CardForEncyclopediaView()
+        }
     }
 }
 
 #Preview {
     EncyclopediaView()
+        .preferredColorScheme(.dark)
 }

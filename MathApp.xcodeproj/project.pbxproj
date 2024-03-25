@@ -10,6 +10,8 @@
 		110CE6E22BB0CF910054954F /* TabViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E12BB0CF910054954F /* TabViewView.swift */; };
 		110CE6E42BB0CFC40054954F /* FiguresAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */; };
 		110CE6E62BB0D2160054954F /* EncyclopediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E52BB0D2160054954F /* EncyclopediaView.swift */; };
+		110CE6E82BB0D4210054954F /* TrainingGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E72BB0D4210054954F /* TrainingGamesView.swift */; };
+		110CE6EA2BB0D5090054954F /* CardForEncyclopediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E92BB0D5090054954F /* CardForEncyclopediaView.swift */; };
 		113089D52BA05D7400985021 /* MathAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113089D42BA05D7400985021 /* MathAppApp.swift */; };
 		113089D72BA05D7400985021 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113089D62BA05D7400985021 /* ContentView.swift */; };
 		113089D92BA05D7600985021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113089D82BA05D7600985021 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		110CE6E12BB0CF910054954F /* TabViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewView.swift; sourceTree = "<group>"; };
 		110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresAreaView.swift; sourceTree = "<group>"; };
 		110CE6E52BB0D2160054954F /* EncyclopediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaView.swift; sourceTree = "<group>"; };
+		110CE6E72BB0D4210054954F /* TrainingGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingGamesView.swift; sourceTree = "<group>"; };
+		110CE6E92BB0D5090054954F /* CardForEncyclopediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardForEncyclopediaView.swift; sourceTree = "<group>"; };
 		113089D12BA05D7400985021 /* MathApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		113089D42BA05D7400985021 /* MathAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathAppApp.swift; sourceTree = "<group>"; };
 		113089D62BA05D7400985021 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,7 +66,9 @@
 				113089D42BA05D7400985021 /* MathAppApp.swift */,
 				113089D62BA05D7400985021 /* ContentView.swift */,
 				110CE6E12BB0CF910054954F /* TabViewView.swift */,
+				110CE6E72BB0D4210054954F /* TrainingGamesView.swift */,
 				110CE6E52BB0D2160054954F /* EncyclopediaView.swift */,
+				110CE6E92BB0D5090054954F /* CardForEncyclopediaView.swift */,
 				110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */,
 				113089E22BA05D9000985021 /* SplashScreen.swift */,
 				113089D82BA05D7600985021 /* Assets.xcassets */,
@@ -150,8 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				110CE6E42BB0CFC40054954F /* FiguresAreaView.swift in Sources */,
+				110CE6E82BB0D4210054954F /* TrainingGamesView.swift in Sources */,
 				113089E32BA05D9000985021 /* SplashScreen.swift in Sources */,
 				110CE6E22BB0CF910054954F /* TabViewView.swift in Sources */,
+				110CE6EA2BB0D5090054954F /* CardForEncyclopediaView.swift in Sources */,
 				113089D72BA05D7400985021 /* ContentView.swift in Sources */,
 				110CE6E62BB0D2160054954F /* EncyclopediaView.swift in Sources */,
 				113089D52BA05D7400985021 /* MathAppApp.swift in Sources */,
