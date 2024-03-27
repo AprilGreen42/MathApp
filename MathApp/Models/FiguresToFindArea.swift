@@ -46,25 +46,86 @@ struct CircleView: View {
         }
     }
     var body: some View {
-        TextField("Радиус", text: $radius)
-            .frame(width: 100, height: 50)
-            .textFieldStyle(.roundedBorder)
-            .multilineTextAlignment(.center)
+        VStack {
+            TextField("Радиус", text: $radius)
+                .frame(width: 100, height: 50)
+                .textFieldStyle(.roundedBorder)
+                .multilineTextAlignment(.center)
+            areaOfFigure(r: radius)
+        }
     }
 }
 
 struct Triangle: View {
+    @State private var firstSide: String = ""
+    @State private var secondSide: String = ""
+    @State private var thirdSide: String = ""
+    func areaOfFigure(_ height: String, _ width: String, _ length: String) -> some View {
+        let width: Double? = Double(width) ?? 0
+        let height: Double? = Double(height) ?? 0
+        let length: Double? = Double(length) ?? 0
+        let perimeter: Double? = ((width! + height! + length!) / 2)
+        let area: Double? = sqrt(perimeter! * (perimeter! - width!) * (perimeter! - height!) * (perimeter! - length!))
+        return VStack {
+            HStack {
+                Image(systemName: "s.square")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                Text(" = \(area!)")
+                    .font(.system(size: 42))
+            }
+        }
+    }
     var body: some View {
-        Text("Triangle")
+        VStack {
+            HStack {
+                Group {
+                    TextField("Высота", text: $firstSide)
+                    TextField("Ширина", text: $secondSide)
+                    TextField("Ширина", text: $thirdSide)
+                }
+            }
+                .frame(width: 300, height: 50)
+                .textFieldStyle(.roundedBorder)
+                .multilineTextAlignment(.center)
+            areaOfFigure(firstSide, secondSide, thirdSide)
+        }
     }
 }
 
 struct Rectangle: View {
+    @State private var heightOfRectangle: String = ""
+    @State private var widthOfRectangle: String = ""
+    func areaOfFigure(_ height: String, _ width: String) -> some View {
+        let width: Double? = Double(width) ?? 0
+        let height: Double? = Double(height) ?? 0
+        return VStack {
+            HStack {
+                Image(systemName: "s.square")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                Text(" = \(width! * height!)")
+                    .font(.system(size: 42))
+            }
+        }
+    }
     var body: some View {
-        Text("Rectangle")
+        VStack {
+            HStack {
+                Group {
+                    TextField("Высота", text: $heightOfRectangle)
+                    TextField("Ширина", text: $widthOfRectangle)
+                }
+            }
+                .frame(width: 200, height: 50)
+                .textFieldStyle(.roundedBorder)
+                .multilineTextAlignment(.center)
+            
+            areaOfFigure(heightOfRectangle, widthOfRectangle)
+        }
     }
 }
 
 #Preview(body: {
-    CircleView()
+    Triangle()
 })
