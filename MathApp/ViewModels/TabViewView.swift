@@ -26,7 +26,7 @@ struct TabViewView: View {
                     TrainingGamesView().tabItem {
                         Image(systemName: "brain.head.profile")
                             .environment(\.symbolVariants, .none)
-                        Text("Area")
+                        Text("Game's")
                     }.tag(2)
                 }
                 .toolbarBackground(.visible, for: .tabBar)
@@ -37,4 +37,5 @@ struct TabViewView: View {
 
 #Preview {
     TabViewView()
+        .preferredColorScheme(.dark)
 }

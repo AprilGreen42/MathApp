@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110A000D2BB1F85800C27E1C /* FiguresToFindArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110A000C2BB1F85800C27E1C /* FiguresToFindArea.swift */; };
+		110A000F2BB1FB6900C27E1C /* AreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110A000E2BB1FB6900C27E1C /* AreaView.swift */; };
 		110CE6E22BB0CF910054954F /* TabViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E12BB0CF910054954F /* TabViewView.swift */; };
 		110CE6E42BB0CFC40054954F /* FiguresAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */; };
 		110CE6E62BB0D2160054954F /* EncyclopediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E52BB0D2160054954F /* EncyclopediaView.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110A000C2BB1F85800C27E1C /* FiguresToFindArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresToFindArea.swift; sourceTree = "<group>"; };
+		110A000E2BB1FB6900C27E1C /* AreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaView.swift; sourceTree = "<group>"; };
 		110CE6E12BB0CF910054954F /* TabViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewView.swift; sourceTree = "<group>"; };
 		110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresAreaView.swift; sourceTree = "<group>"; };
 		110CE6E52BB0D2160054954F /* EncyclopediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110A00102BB1FCA400C27E1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				113089E22BA05D9000985021 /* SplashScreen.swift */,
+				110A000E2BB1FB6900C27E1C /* AreaView.swift */,
+				110CE6E52BB0D2160054954F /* EncyclopediaView.swift */,
+				110CE6E92BB0D5090054954F /* CardForEncyclopediaView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		110A00112BB1FCB400C27E1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				110A000C2BB1F85800C27E1C /* FiguresToFindArea.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		110A00122BB1FCC000C27E1C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				113089D62BA05D7400985021 /* ContentView.swift */,
+				110CE6E12BB0CF910054954F /* TabViewView.swift */,
+				110CE6E72BB0D4210054954F /* TrainingGamesView.swift */,
+				110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		113089C82BA05D7400985021 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				113089D42BA05D7400985021 /* MathAppApp.swift */,
-				113089D62BA05D7400985021 /* ContentView.swift */,
-				110CE6E12BB0CF910054954F /* TabViewView.swift */,
-				110CE6E72BB0D4210054954F /* TrainingGamesView.swift */,
-				110CE6E52BB0D2160054954F /* EncyclopediaView.swift */,
-				110CE6E92BB0D5090054954F /* CardForEncyclopediaView.swift */,
-				110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */,
-				113089E22BA05D9000985021 /* SplashScreen.swift */,
+				110A00122BB1FCC000C27E1C /* ViewModels */,
+				110A00102BB1FCA400C27E1C /* Views */,
+				110A00112BB1FCB400C27E1C /* Models */,
 				113089D82BA05D7600985021 /* Assets.xcassets */,
 				113089DA2BA05D7600985021 /* Preview Content */,
 			);
@@ -158,11 +188,13 @@
 				110CE6E42BB0CFC40054954F /* FiguresAreaView.swift in Sources */,
 				110CE6E82BB0D4210054954F /* TrainingGamesView.swift in Sources */,
 				113089E32BA05D9000985021 /* SplashScreen.swift in Sources */,
+				110A000F2BB1FB6900C27E1C /* AreaView.swift in Sources */,
 				110CE6E22BB0CF910054954F /* TabViewView.swift in Sources */,
 				110CE6EA2BB0D5090054954F /* CardForEncyclopediaView.swift in Sources */,
 				113089D72BA05D7400985021 /* ContentView.swift in Sources */,
 				110CE6E62BB0D2160054954F /* EncyclopediaView.swift in Sources */,
 				113089D52BA05D7400985021 /* MathAppApp.swift in Sources */,
+				110A000D2BB1F85800C27E1C /* FiguresToFindArea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

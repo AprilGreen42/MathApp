@@ -9,7 +9,12 @@ import SwiftUI
 
 struct TrainingGamesView: View {
     var body: some View {
-        Text("Training games")
+        NavigationStack {
+            VStack {
+                Text("Game's")
+            }
+            .navigationTitle("Game's")
+        }
     }
 }
 
