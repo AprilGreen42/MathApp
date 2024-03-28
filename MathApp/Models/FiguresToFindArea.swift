@@ -8,10 +8,12 @@
 import Foundation
 import SwiftUI
 
+
 enum Figures: String, CaseIterable, Identifiable {
     case triangle, rectangle, circle
     var id: Self { self }
 }
+
 
 struct AreaFinding: View {
     var fig: Figures
@@ -31,18 +33,14 @@ struct AreaFinding: View {
     }
 }
 
+
 struct CircleView: View {
     @State private var radius: String = ""
     func areaOfFigure(r: String) -> some View {
         let radius: Double? = Double(r) ?? 0
+        let areaOfCircle: Double? = 3.14 * radius! * radius!
         return VStack {
-            HStack {
-                Image(systemName: "s.square")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                Text(" = \(3.14 * radius! * radius!)")
-                    .font(.system(size: 42))
-            }
+            ShowAreaFigure(area: areaOfCircle!)
         }
     }
     var body: some View {
@@ -56,6 +54,7 @@ struct CircleView: View {
     }
 }
 
+
 struct Triangle: View {
     @State private var firstSide: String = ""
     @State private var secondSide: String = ""
@@ -65,15 +64,9 @@ struct Triangle: View {
         let height: Double? = Double(height) ?? 0
         let length: Double? = Double(length) ?? 0
         let perimeter: Double? = ((width! + height! + length!) / 2)
-        let area: Double? = sqrt(perimeter! * (perimeter! - width!) * (perimeter! - height!) * (perimeter! - length!))
+        let areaOfTriangle: Double? = sqrt(perimeter! * (perimeter! - width!) * (perimeter! - height!) * (perimeter! - length!))
         return VStack {
-            HStack {
-                Image(systemName: "s.square")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                Text(" = \(area!)")
-                    .font(.system(size: 42))
-            }
+            ShowAreaFigure(area: (areaOfTriangle!))
         }
     }
     var body: some View {
@@ -93,20 +86,16 @@ struct Triangle: View {
     }
 }
 
+
 struct Rectangle: View {
     @State private var heightOfRectangle: String = ""
     @State private var widthOfRectangle: String = ""
     func areaOfFigure(_ height: String, _ width: String) -> some View {
         let width: Double? = Double(width) ?? 0
         let height: Double? = Double(height) ?? 0
+        let area: Double? = width! * height!
         return VStack {
-            HStack {
-                Image(systemName: "s.square")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                Text(" = \(width! * height!)")
-                    .font(.system(size: 42))
-            }
+            ShowAreaFigure(area: (area!))
         }
     }
     var body: some View {
@@ -126,6 +115,24 @@ struct Rectangle: View {
     }
 }
 
+
+struct ShowAreaFigure: View {
+    init(area: Double? = nil) {
+        self.area = (area! * 1000).rounded() / 1000
+    }
+    var area: Double?
+    var body: some View {
+        HStack {
+            Image(systemName: "s.square")
+                .resizable()
+                .frame(width: 30, height: 30)
+            Text(" = \(String(format: "%.2f", area!))")
+                .font(.system(size: 42))
+        }
+    }
+}
+
+
 #Preview(body: {
-    Triangle()
+    Rectangle()
 })
