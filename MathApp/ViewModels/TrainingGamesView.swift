@@ -11,7 +11,7 @@ struct TrainingGamesView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Game's")
+                MathGameView()
             }
             .navigationTitle("Game's")
         }

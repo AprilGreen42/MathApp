@@ -73,12 +73,12 @@ struct Triangle: View {
         VStack {
             HStack {
                 Group {
-                    TextField("Высота", text: $firstSide)
-                    TextField("Ширина", text: $secondSide)
-                    TextField("Ширина", text: $thirdSide)
+                    TextField("Сторона A", text: $firstSide)
+                    TextField("Сторона B", text: $secondSide)
+                    TextField("Сторона C", text: $thirdSide)
                 }
             }
-                .frame(width: 300, height: 50)
+                .frame(width: 320, height: 50)
                 .textFieldStyle(.roundedBorder)
                 .multilineTextAlignment(.center)
             areaOfFigure(firstSide, secondSide, thirdSide)
@@ -134,5 +134,5 @@ struct ShowAreaFigure: View {
 
 
 #Preview(body: {
-    Rectangle()
+    Triangle()
 })
