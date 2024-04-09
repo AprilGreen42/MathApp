@@ -19,9 +19,10 @@
 		113089D92BA05D7600985021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113089D82BA05D7600985021 /* Assets.xcassets */; };
 		113089DC2BA05D7600985021 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113089DB2BA05D7600985021 /* Preview Assets.xcassets */; };
 		113089E32BA05D9000985021 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113089E22BA05D9000985021 /* SplashScreen.swift */; };
-		114120D92BB9B86200BA6967 /* MathGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114120D82BB9B86200BA6967 /* MathGameView.swift */; };
+		114120D92BB9B86200BA6967 /* FirstMathGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114120D82BB9B86200BA6967 /* FirstMathGameView.swift */; };
 		114120DB2BB9B96700BA6967 /* ButtonForAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114120DA2BB9B96700BA6967 /* ButtonForAnswerView.swift */; };
 		114120DD2BB9BE2300BA6967 /* GenerateQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114120DC2BB9BE2300BA6967 /* GenerateQuestion.swift */; };
+		11D43F422BC59C49004D967D /* CardForGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D43F412BC59C49004D967D /* CardForGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +39,10 @@
 		113089D82BA05D7600985021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		113089DB2BA05D7600985021 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		113089E22BA05D9000985021 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		114120D82BB9B86200BA6967 /* MathGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGameView.swift; sourceTree = "<group>"; };
+		114120D82BB9B86200BA6967 /* FirstMathGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMathGameView.swift; sourceTree = "<group>"; };
 		114120DA2BB9B96700BA6967 /* ButtonForAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonForAnswerView.swift; sourceTree = "<group>"; };
 		114120DC2BB9BE2300BA6967 /* GenerateQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQuestion.swift; sourceTree = "<group>"; };
+		11D43F412BC59C49004D967D /* CardForGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardForGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				113089E22BA05D9000985021 /* SplashScreen.swift */,
+				11D43F412BC59C49004D967D /* CardForGameView.swift */,
 				110A000E2BB1FB6900C27E1C /* AreaView.swift */,
 				114120DA2BB9B96700BA6967 /* ButtonForAnswerView.swift */,
 				110CE6E52BB0D2160054954F /* EncyclopediaView.swift */,
@@ -80,7 +83,7 @@
 			children = (
 				113089D62BA05D7400985021 /* ContentView.swift */,
 				110CE6E12BB0CF910054954F /* TabViewView.swift */,
-				114120D82BB9B86200BA6967 /* MathGameView.swift */,
+				114120D82BB9B86200BA6967 /* FirstMathGameView.swift */,
 				110CE6E72BB0D4210054954F /* TrainingGamesView.swift */,
 				110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */,
 			);
@@ -199,11 +202,12 @@
 				113089E32BA05D9000985021 /* SplashScreen.swift in Sources */,
 				110A000F2BB1FB6900C27E1C /* AreaView.swift in Sources */,
 				114120DD2BB9BE2300BA6967 /* GenerateQuestion.swift in Sources */,
-				114120D92BB9B86200BA6967 /* MathGameView.swift in Sources */,
+				114120D92BB9B86200BA6967 /* FirstMathGameView.swift in Sources */,
 				110CE6E22BB0CF910054954F /* TabViewView.swift in Sources */,
 				114120DB2BB9B96700BA6967 /* ButtonForAnswerView.swift in Sources */,
 				110CE6EA2BB0D5090054954F /* CardForEncyclopediaView.swift in Sources */,
 				113089D72BA05D7400985021 /* ContentView.swift in Sources */,
+				11D43F422BC59C49004D967D /* CardForGameView.swift in Sources */,
 				110CE6E62BB0D2160054954F /* EncyclopediaView.swift in Sources */,
 				113089D52BA05D7400985021 /* MathAppApp.swift in Sources */,
 				110A000D2BB1F85800C27E1C /* FiguresToFindArea.swift in Sources */,

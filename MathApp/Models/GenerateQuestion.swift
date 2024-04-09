@@ -13,16 +13,37 @@ class Question: ObservableObject {
     @Published var secondValue: Int
     @Published var question: Int = 4
     @Published var answers: [Int]
+    var operations: [String] = ["+", "*", "-"]
+    @Published var operation: String
+    @Published var correctAnswer: Int
+    @Published var score: Int
+    
     init() {
         self.firstValue = Int.random(in: 0...15)
         self.secondValue = Int.random(in: 0...15)
         self.answers = [0, 1, 2, 3]
+        operation = operations.randomElement()!
+        self.correctAnswer = 0
+        self.score = 0
     }
+    
     func generateQuestion() {
         self.firstValue = Int.random(in: 0...15)
         self.secondValue = Int.random(in: 0...15)
-        self.question = firstValue + secondValue
+        operation = operations.randomElement()!
+        switch operation {
+        case "+":
+            self.question = firstValue + secondValue
+        case "*":
+            self.question = firstValue * secondValue
+        case "-":
+            self.question = firstValue - secondValue
+        default:
+            break
+        }
+        self.correctAnswer = question
     }
+    
     func generateAnswers() {
         self.answers.removeAll()
         var randElem: Int
@@ -37,6 +58,12 @@ class Question: ObservableObject {
             }
         }
         self.answers.shuffle()
+    }
+    
+    func corAnswer(varAnswer: Int) {
+        if question == varAnswer {
+            score += 1
+        }
     }
 }
 
