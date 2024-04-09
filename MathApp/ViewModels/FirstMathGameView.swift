@@ -9,7 +9,6 @@ import SwiftUI
 
 struct FirstMathGameView: View {
     @StateObject private var question: Question = Question()
-    private var randomValue: Int = 1
     @State private var answer: String = "4"
     var body: some View {
         VStack {

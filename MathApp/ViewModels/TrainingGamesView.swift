@@ -18,9 +18,9 @@ struct TrainingGamesView: View {
                         CardForGameView(gameNumber: "Game №1", descriptionGame: "A simple game in which you need to calculate the result using an example and choose the correct answer from 4 suggested ones")
                     })
                     NavigationLink(destination: {
-                        EmptyView()
+                        SecondMathGameView()
                     }, label: {
-                        CardForGameView(gameNumber: "Game №2", descriptionGame: "A simple game in which you need to calculate the result using an example and answer yes or no")
+                        CardForGameView(gameNumber: "Game №2", descriptionGame: "A simple game in which you need to calculate the result using an example and answer 'Yes' or 'No'")
                     })
                 }
             }

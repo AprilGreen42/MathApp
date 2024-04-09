@@ -15,15 +15,15 @@ class Question: ObservableObject {
     @Published var answers: [Int]
     var operations: [String] = ["+", "*", "-"]
     @Published var operation: String
-    @Published var correctAnswer: Int
+    @Published var correctAnswer: Bool = false
     @Published var score: Int
+    @Published var possibleAnswer: Int = 0
     
     init() {
         self.firstValue = Int.random(in: 0...15)
         self.secondValue = Int.random(in: 0...15)
         self.answers = [0, 1, 2, 3]
         operation = operations.randomElement()!
-        self.correctAnswer = 0
         self.score = 0
     }
     
@@ -41,7 +41,7 @@ class Question: ObservableObject {
         default:
             break
         }
-        self.correctAnswer = question
+        self.possibleAnswer = Int.random(in: question-2...question+2)
     }
     
     func generateAnswers() {
@@ -63,6 +63,19 @@ class Question: ObservableObject {
     func corAnswer(varAnswer: Int) {
         if question == varAnswer {
             score += 1
+        }
+    }
+    
+    func corAnswer2(varAnswer: Bool) {
+        if varAnswer == true {
+            if question == possibleAnswer {
+                self.score += 1
+            }
+        }
+        else {
+            if question != possibleAnswer {
+                self.score += 1
+            }
         }
     }
 }
