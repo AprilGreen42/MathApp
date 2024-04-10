@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isShow: Bool = false
+    @State private var isShow: Bool = true
     var body: some View {
-        TabViewView()
+        VStack {
+            if self.isShow {
+                SplashScreen()
+                    .ignoresSafeArea(.all)
+            }
+            else {
+                TabViewView()
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                self.isShow = false
+            }
+        }
     }
 }
 

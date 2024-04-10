@@ -8,25 +8,25 @@
 import SwiftUI
 
 struct SecondMathGameView: View {
-    @StateObject private var question: Question = Question()
+    @StateObject private var questionForSecondGame: Question = Question()
     var body: some View {
         VStack {
             VStack {
-                Text("Score: \(question.score)")
+                Text("Score: \(questionForSecondGame.score)")
                     .bold()
                     .font(.title)
             }
             .padding(.bottom, 150)
             
-            Text("\(question.firstValue) \(question.operation) \(question.secondValue) = \(question.possibleAnswer)")
+            Text("\(questionForSecondGame.firstValue) \(questionForSecondGame.operation) \(questionForSecondGame.secondValue) = \(questionForSecondGame.possibleAnswer)")
                 .bold()
                 .font(.title)
                 .padding(.bottom, 30)
             
             HStack {
                 Button(action: {
-                    question.corAnswer2(varAnswer: true)
-                    question.generateQuestion()
+                    questionForSecondGame.corAnswer2(varAnswer: true)
+                    questionForSecondGame.generateQuestion()
                 }, label: {
                     Text("Yes")
                 })
@@ -40,8 +40,8 @@ struct SecondMathGameView: View {
                     .bold()
                 
                 Button(action: {
-                    question.corAnswer2(varAnswer: false)
-                    question.generateQuestion()
+                    questionForSecondGame.corAnswer2(varAnswer: false)
+                    questionForSecondGame.generateQuestion()
                 }, label: {
                     Text("No")
                 })
@@ -52,7 +52,7 @@ struct SecondMathGameView: View {
             }
         }
         .onAppear() {
-            question.generateQuestion()
+            questionForSecondGame.generateQuestion()
         }
     }
 }

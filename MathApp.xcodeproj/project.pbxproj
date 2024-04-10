@@ -61,6 +61,7 @@
 		110A00102BB1FCA400C27E1C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				110CE6E12BB0CF910054954F /* TabViewView.swift */,
 				113089E22BA05D9000985021 /* SplashScreen.swift */,
 				11D43F412BC59C49004D967D /* CardForGameView.swift */,
 				110A000E2BB1FB6900C27E1C /* AreaView.swift */,
@@ -84,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				113089D62BA05D7400985021 /* ContentView.swift */,
-				110CE6E12BB0CF910054954F /* TabViewView.swift */,
 				114120D82BB9B86200BA6967 /* FirstMathGameView.swift */,
 				11D43F432BC5A2A1004D967D /* SecondMathGameView.swift */,
 				110CE6E72BB0D4210054954F /* TrainingGamesView.swift */,

@@ -8,63 +8,47 @@
 import SwiftUI
 
 struct FirstMathGameView: View {
-    @StateObject private var question: Question = Question()
+    @StateObject private var questionForFirstGame: Question = Question()
     @State private var answer: String = "4"
     var body: some View {
         VStack {
             VStack {
-                Text("Score: \(question.score)")
+                Text("Score: \(questionForFirstGame.score)")
                     .bold()
                     .font(.title)
             }
             .padding(.bottom, 150)
-            Text("\(question.firstValue) \(question.operation) \(question.secondValue)")
+            Text("\(questionForFirstGame.firstValue) \(questionForFirstGame.operation) \(questionForFirstGame.secondValue)")
                 .bold()
                 .font(.title)
-            VStack {
-                HStack {
+            HStack {
+                ForEach(0..<2) { but in
                     Button(action: {
-                        question.corAnswer(varAnswer: question.answers[0])
-                        question.generateQuestion()
-                        question.generateAnswers()
+                        questionForFirstGame.corAnswer(varAnswer: questionForFirstGame.answers[but])
+                        questionForFirstGame.generateQuestion()
+                        questionForFirstGame.generateAnswers()
                     }, label: {
-                        ButtonForAnswerView(answer: "\(question.answers[0])")
+                        ButtonForAnswerView(answer: "\(questionForFirstGame.answers[but])")
                     })
                     .frame(width: 100, height: 100)
-                    Button(action: {
-                        question.corAnswer(varAnswer: question.answers[1])
-                        question.generateQuestion()
-                        question.generateAnswers()
-                    }, label: {
-                        ButtonForAnswerView(answer: "\(question.answers[1])")
-                    })
-                    .frame(width: 100, height: 100)
-                    
                 }
-                HStack {
+            }
+            HStack {
+                ForEach(2..<4) { but in
                     Button(action: {
-                        question.corAnswer(varAnswer: question.answers[2])
-                        question.generateQuestion()
-                        question.generateAnswers()
+                        questionForFirstGame.corAnswer(varAnswer: questionForFirstGame.answers[but])
+                        questionForFirstGame.generateQuestion()
+                        questionForFirstGame.generateAnswers()
                     }, label: {
-                        ButtonForAnswerView(answer: "\(question.answers[2])")
-                    })
-                    .frame(width: 100, height: 100)
-                    
-                    Button(action: {
-                        question.corAnswer(varAnswer: question.answers[3])
-                        question.generateQuestion()
-                        question.generateAnswers()
-                    }, label: {
-                        ButtonForAnswerView(answer: "\(question.answers[3])")
+                        ButtonForAnswerView(answer: "\(questionForFirstGame.answers[but])")
                     })
                     .frame(width: 100, height: 100)
                 }
             }
         }
         .onAppear() {
-            question.generateQuestion()
-            question.generateAnswers()
+            questionForFirstGame.generateQuestion()
+            questionForFirstGame.generateAnswers()
         }
     }
 }
