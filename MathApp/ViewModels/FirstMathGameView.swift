@@ -10,8 +10,15 @@ import SwiftUI
 struct FirstMathGameView: View {
     @StateObject private var questionForFirstGame: Question = Question()
     @State private var answer: String = "4"
+    @AppStorage("BestScoreForFitstGame") var bestScore = 0
     var body: some View {
         VStack {
+            VStack {
+                Text("Best Score: \(bestScore)")
+                    .bold()
+                    .font(.title)
+            }
+            .padding(.bottom, 100)
             VStack {
                 Text("Score: \(questionForFirstGame.score)")
                     .bold()
@@ -27,6 +34,7 @@ struct FirstMathGameView: View {
                         questionForFirstGame.corAnswer(varAnswer: questionForFirstGame.answers[but])
                         questionForFirstGame.generateQuestion()
                         questionForFirstGame.generateAnswers()
+                        addScore()
                     }, label: {
                         ButtonForAnswerView(answer: "\(questionForFirstGame.answers[but])")
                     })
@@ -39,6 +47,7 @@ struct FirstMathGameView: View {
                         questionForFirstGame.corAnswer(varAnswer: questionForFirstGame.answers[but])
                         questionForFirstGame.generateQuestion()
                         questionForFirstGame.generateAnswers()
+                        addScore()
                     }, label: {
                         ButtonForAnswerView(answer: "\(questionForFirstGame.answers[but])")
                     })
@@ -49,6 +58,11 @@ struct FirstMathGameView: View {
         .onAppear() {
             questionForFirstGame.generateQuestion()
             questionForFirstGame.generateAnswers()
+        }
+    }
+    func addScore() {
+        if self.questionForFirstGame.score >= bestScore {
+            bestScore = self.questionForFirstGame.score
         }
     }
 }
