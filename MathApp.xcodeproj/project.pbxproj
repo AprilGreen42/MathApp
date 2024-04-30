@@ -22,6 +22,10 @@
 		114120D92BB9B86200BA6967 /* FirstMathGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114120D82BB9B86200BA6967 /* FirstMathGameView.swift */; };
 		114120DB2BB9B96700BA6967 /* ButtonForAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114120DA2BB9B96700BA6967 /* ButtonForAnswerView.swift */; };
 		114120DD2BB9BE2300BA6967 /* GenerateQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114120DC2BB9BE2300BA6967 /* GenerateQuestion.swift */; };
+		11C846D02BD3E6BB00BFF695 /* ModelForThirdGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C846CF2BD3E6BB00BFF695 /* ModelForThirdGame.swift */; };
+		11C846D22BD3E78000BFF695 /* ThirdMathGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C846D12BD3E78000BFF695 /* ThirdMathGameView.swift */; };
+		11C846D42BE10C2400BFF695 /* YouTubePlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C846D32BE10C2400BFF695 /* YouTubePlayerModel.swift */; };
+		11C846D62BE1156300BFF695 /* VideoForFindingArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C846D52BE1156300BFF695 /* VideoForFindingArea.swift */; };
 		11D43F422BC59C49004D967D /* CardForGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D43F412BC59C49004D967D /* CardForGameView.swift */; };
 		11D43F442BC5A2A1004D967D /* SecondMathGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D43F432BC5A2A1004D967D /* SecondMathGameView.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +47,10 @@
 		114120D82BB9B86200BA6967 /* FirstMathGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMathGameView.swift; sourceTree = "<group>"; };
 		114120DA2BB9B96700BA6967 /* ButtonForAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonForAnswerView.swift; sourceTree = "<group>"; };
 		114120DC2BB9BE2300BA6967 /* GenerateQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQuestion.swift; sourceTree = "<group>"; };
+		11C846CF2BD3E6BB00BFF695 /* ModelForThirdGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForThirdGame.swift; sourceTree = "<group>"; };
+		11C846D12BD3E78000BFF695 /* ThirdMathGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdMathGameView.swift; sourceTree = "<group>"; };
+		11C846D32BE10C2400BFF695 /* YouTubePlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubePlayerModel.swift; sourceTree = "<group>"; };
+		11C846D52BE1156300BFF695 /* VideoForFindingArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoForFindingArea.swift; sourceTree = "<group>"; };
 		11D43F412BC59C49004D967D /* CardForGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardForGameView.swift; sourceTree = "<group>"; };
 		11D43F432BC5A2A1004D967D /* SecondMathGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMathGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +76,7 @@
 				114120DA2BB9B96700BA6967 /* ButtonForAnswerView.swift */,
 				110CE6E52BB0D2160054954F /* EncyclopediaView.swift */,
 				110CE6E92BB0D5090054954F /* CardForEncyclopediaView.swift */,
+				11C846D52BE1156300BFF695 /* VideoForFindingArea.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -75,8 +84,10 @@
 		110A00112BB1FCB400C27E1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				11C846CF2BD3E6BB00BFF695 /* ModelForThirdGame.swift */,
 				110A000C2BB1F85800C27E1C /* FiguresToFindArea.swift */,
 				114120DC2BB9BE2300BA6967 /* GenerateQuestion.swift */,
+				11C846D32BE10C2400BFF695 /* YouTubePlayerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,6 +98,7 @@
 				113089D62BA05D7400985021 /* ContentView.swift */,
 				114120D82BB9B86200BA6967 /* FirstMathGameView.swift */,
 				11D43F432BC5A2A1004D967D /* SecondMathGameView.swift */,
+				11C846D12BD3E78000BFF695 /* ThirdMathGameView.swift */,
 				110CE6E72BB0D4210054954F /* TrainingGamesView.swift */,
 				110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */,
 			);
@@ -204,17 +216,21 @@
 				110CE6E82BB0D4210054954F /* TrainingGamesView.swift in Sources */,
 				11D43F442BC5A2A1004D967D /* SecondMathGameView.swift in Sources */,
 				113089E32BA05D9000985021 /* SplashScreen.swift in Sources */,
+				11C846D42BE10C2400BFF695 /* YouTubePlayerModel.swift in Sources */,
 				110A000F2BB1FB6900C27E1C /* AreaView.swift in Sources */,
 				114120DD2BB9BE2300BA6967 /* GenerateQuestion.swift in Sources */,
+				11C846D62BE1156300BFF695 /* VideoForFindingArea.swift in Sources */,
 				114120D92BB9B86200BA6967 /* FirstMathGameView.swift in Sources */,
 				110CE6E22BB0CF910054954F /* TabViewView.swift in Sources */,
 				114120DB2BB9B96700BA6967 /* ButtonForAnswerView.swift in Sources */,
+				11C846D22BD3E78000BFF695 /* ThirdMathGameView.swift in Sources */,
 				110CE6EA2BB0D5090054954F /* CardForEncyclopediaView.swift in Sources */,
 				113089D72BA05D7400985021 /* ContentView.swift in Sources */,
 				11D43F422BC59C49004D967D /* CardForGameView.swift in Sources */,
 				110CE6E62BB0D2160054954F /* EncyclopediaView.swift in Sources */,
 				113089D52BA05D7400985021 /* MathAppApp.swift in Sources */,
 				110A000D2BB1F85800C27E1C /* FiguresToFindArea.swift in Sources */,
+				11C846D02BD3E6BB00BFF695 /* ModelForThirdGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

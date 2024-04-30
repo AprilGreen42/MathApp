@@ -13,7 +13,7 @@ struct CardForGameView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
-                .frame(width: .infinity, height: 200)
+                .frame(width: 380, height: 200)
                 .foregroundStyle(LinearGradient(colors: [.purple, .blue], startPoint: .leading, endPoint: .trailing))
 
             VStack(alignment: .leading) {

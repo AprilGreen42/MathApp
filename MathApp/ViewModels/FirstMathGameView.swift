@@ -18,13 +18,13 @@ struct FirstMathGameView: View {
                     .bold()
                     .font(.title)
             }
-            .padding(.bottom, 100)
+            .padding(.bottom, 50)
             VStack {
                 Text("Score: \(questionForFirstGame.score)")
                     .bold()
                     .font(.title)
             }
-            .padding(.bottom, 150)
+            .padding(.bottom, 100)
             Text("\(questionForFirstGame.firstValue) \(questionForFirstGame.operation) \(questionForFirstGame.secondValue)")
                 .bold()
                 .font(.title)
