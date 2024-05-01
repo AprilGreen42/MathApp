@@ -45,7 +45,7 @@ struct CircleView: View {
     }
     var body: some View {
         VStack {
-            TextField("Радиус", text: $radius)
+            TextField("Radius", text: $radius)
                 .frame(width: 100, height: 50)
                 .textFieldStyle(.roundedBorder)
                 .multilineTextAlignment(.center)
@@ -73,9 +73,9 @@ struct Triangle: View {
         VStack {
             HStack {
                 Group {
-                    TextField("Сторона A", text: $firstSide)
-                    TextField("Сторона B", text: $secondSide)
-                    TextField("Сторона C", text: $thirdSide)
+                    TextField("Side A", text: $firstSide)
+                    TextField("Side B", text: $secondSide)
+                    TextField("Side C", text: $thirdSide)
                 }
             }
                 .frame(width: 320, height: 50)
@@ -102,8 +102,8 @@ struct Rectangle: View {
         VStack {
             HStack {
                 Group {
-                    TextField("Высота", text: $heightOfRectangle)
-                    TextField("Ширина", text: $widthOfRectangle)
+                    TextField("Height", text: $heightOfRectangle)
+                    TextField("Width", text: $widthOfRectangle)
                 }
             }
                 .frame(width: 200, height: 50)
@@ -131,8 +131,3 @@ struct ShowAreaFigure: View {
         }
     }
 }
-
-
-#Preview(body: {
-    Triangle()
-})

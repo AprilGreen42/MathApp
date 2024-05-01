@@ -10,11 +10,14 @@ import SwiftUI
 struct EncyclopediaView: View {
     var body: some View {
         NavigationStack {
-            NavigationLink(destination: {
-                VideoForFindingArea()
-            }, label: {
-                CardForEncyclopediaView(nameOfCard: "Figures Area")
-            })
+            ScrollView(.vertical, showsIndicators: false) {
+                NavigationLink(destination: {
+                    VideoForFindingArea()
+                }, label: {
+                    CardForEncyclopediaView(nameOfCard: "Figures Area")
+                })
+            }
+            .padding()
             .navigationTitle("Encyclopedia")
         }
     }

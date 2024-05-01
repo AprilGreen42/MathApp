@@ -10,6 +10,7 @@ import SwiftUI
 struct ThirdMathGameView: View {
     var body: some View {
         VStack {
+            
         }
     }
 }

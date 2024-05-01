@@ -69,14 +69,10 @@
 		110A00102BB1FCA400C27E1C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				110CE6E12BB0CF910054954F /* TabViewView.swift */,
 				113089E22BA05D9000985021 /* SplashScreen.swift */,
 				11D43F412BC59C49004D967D /* CardForGameView.swift */,
-				110A000E2BB1FB6900C27E1C /* AreaView.swift */,
 				114120DA2BB9B96700BA6967 /* ButtonForAnswerView.swift */,
-				110CE6E52BB0D2160054954F /* EncyclopediaView.swift */,
 				110CE6E92BB0D5090054954F /* CardForEncyclopediaView.swift */,
-				11C846D52BE1156300BFF695 /* VideoForFindingArea.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -96,11 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				113089D62BA05D7400985021 /* ContentView.swift */,
-				114120D82BB9B86200BA6967 /* FirstMathGameView.swift */,
-				11D43F432BC5A2A1004D967D /* SecondMathGameView.swift */,
-				11C846D12BD3E78000BFF695 /* ThirdMathGameView.swift */,
-				110CE6E72BB0D4210054954F /* TrainingGamesView.swift */,
-				110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */,
+				110CE6E12BB0CF910054954F /* TabViewView.swift */,
+				11C846D92BE177D400BFF695 /* EncyclopediaViewModel */,
+				11C846D72BE1775400BFF695 /* GameViewModels */,
+				11C846D82BE1778600BFF695 /* AreaViewModel */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -140,6 +135,35 @@
 				113089DB2BA05D7600985021 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11C846D72BE1775400BFF695 /* GameViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				110CE6E72BB0D4210054954F /* TrainingGamesView.swift */,
+				114120D82BB9B86200BA6967 /* FirstMathGameView.swift */,
+				11D43F432BC5A2A1004D967D /* SecondMathGameView.swift */,
+				11C846D12BD3E78000BFF695 /* ThirdMathGameView.swift */,
+			);
+			path = GameViewModels;
+			sourceTree = "<group>";
+		};
+		11C846D82BE1778600BFF695 /* AreaViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */,
+				110A000E2BB1FB6900C27E1C /* AreaView.swift */,
+			);
+			path = AreaViewModel;
+			sourceTree = "<group>";
+		};
+		11C846D92BE177D400BFF695 /* EncyclopediaViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				110CE6E52BB0D2160054954F /* EncyclopediaView.swift */,
+				11C846D52BE1156300BFF695 /* VideoForFindingArea.swift */,
+			);
+			path = EncyclopediaViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,8 +394,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,8 +424,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
