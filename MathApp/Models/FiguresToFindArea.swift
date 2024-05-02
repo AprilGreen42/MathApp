@@ -10,7 +10,9 @@ import SwiftUI
 
 
 enum Figures: String, CaseIterable, Identifiable {
-    case triangle, rectangle, circle
+    case triangle = "triangle"
+    case rectangle = "rectangle"
+    case circle = "circle"
     var id: Self { self }
 }
 
@@ -22,9 +24,9 @@ struct AreaFinding: View {
         case .circle:
             return AnyView(CircleView())
         case .triangle:
-            return AnyView(Triangle())
+            return AnyView(TriangleView())
         case .rectangle:
-            return AnyView(Rectangle())
+            return AnyView(RectangleView())
         }
     }
 
@@ -55,16 +57,13 @@ struct CircleView: View {
 }
 
 
-struct Triangle: View {
+struct TriangleView: View {
     @State private var firstSide: String = ""
     @State private var secondSide: String = ""
-    @State private var thirdSide: String = ""
-    func areaOfFigure(_ height: String, _ width: String, _ length: String) -> some View {
+    func areaOfFigure(_ height: String, _ width: String) -> some View {
         let width: Double? = Double(width) ?? 0
         let height: Double? = Double(height) ?? 0
-        let length: Double? = Double(length) ?? 0
-        let perimeter: Double? = ((width! + height! + length!) / 2)
-        let areaOfTriangle: Double? = sqrt(perimeter! * (perimeter! - width!) * (perimeter! - height!) * (perimeter! - length!))
+        let areaOfTriangle: Double? = ((width! * height!) / 2)
         return VStack {
             ShowAreaFigure(area: (areaOfTriangle!))
         }
@@ -73,21 +72,20 @@ struct Triangle: View {
         VStack {
             HStack {
                 Group {
-                    TextField("Side A", text: $firstSide)
-                    TextField("Side B", text: $secondSide)
-                    TextField("Side C", text: $thirdSide)
+                    TextField("Height", text: $firstSide)
+                    TextField("Width", text: $secondSide)
                 }
             }
                 .frame(width: 320, height: 50)
                 .textFieldStyle(.roundedBorder)
                 .multilineTextAlignment(.center)
-            areaOfFigure(firstSide, secondSide, thirdSide)
+            areaOfFigure(firstSide, secondSide)
         }
     }
 }
 
 
-struct Rectangle: View {
+struct RectangleView: View {
     @State private var heightOfRectangle: String = ""
     @State private var widthOfRectangle: String = ""
     func areaOfFigure(_ height: String, _ width: String) -> some View {

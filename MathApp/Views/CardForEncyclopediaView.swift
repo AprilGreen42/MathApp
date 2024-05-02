@@ -13,11 +13,12 @@ struct CardForEncyclopediaView: View {
         VStack {
             ZStack {
                 RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                    .frame(width: 380, height: 200)
+                    .frame(width: .infinity, height: 200)
                     .foregroundStyle(LinearGradient(colors: [Color("FirstColorForCard"), Color("SecondColorForCard")], startPoint: .leading, endPoint: .trailing))
                 Text(nameOfCard)
                     .foregroundStyle(.white)
                     .font(.title)
+                    .bold()
             }
         }
     }

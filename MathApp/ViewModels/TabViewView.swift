@@ -18,10 +18,10 @@ struct TabViewView: View {
                             .environment(\.symbolVariants, .none)
                         Text("Encyclopedia")
                     }.tag(0)
-                    FiguresAreaView().tabItem {
+                    CalculationsView().tabItem {
                         Image(systemName: "chart.pie")
                             .environment(\.symbolVariants, .none)
-                        Text("Area")
+                        Text("Calculations")
                     }.tag(1)
                     TrainingGamesView().tabItem {
                         Image(systemName: "brain.head.profile")

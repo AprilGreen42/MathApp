@@ -16,6 +16,11 @@ struct EncyclopediaView: View {
                 }, label: {
                     CardForEncyclopediaView(nameOfCard: "Figures Area")
                 })
+                NavigationLink(destination: {
+                    VideoAboutMathOperations()
+                }, label: {
+                    CardForEncyclopediaView(nameOfCard: "Math Operations")
+                })
             }
             .padding()
             .navigationTitle("Encyclopedia")

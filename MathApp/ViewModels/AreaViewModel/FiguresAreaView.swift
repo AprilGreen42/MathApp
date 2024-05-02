@@ -18,11 +18,20 @@ struct FiguresAreaView: View {
                             
                     }
                 })
-                Image(systemName: "\(selection.rawValue)")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .padding(.top, 30)
-                    .padding(.bottom, 30)
+                if selection == .triangle {
+                    Image(systemName: "righttriangle")
+                        .resizable()
+                        .scaleEffect(x: -1, y: 1)
+                        .frame(width: 120, height: 120)
+                        .padding(.top, 30)
+                        .padding(.bottom, 30)
+                } else {
+                    Image(systemName: "\(selection.rawValue)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .padding(.top, 30)
+                        .padding(.bottom, 30)
+                }
                 AreaView(selectedFigure: $selection)
                 Spacer()
             }

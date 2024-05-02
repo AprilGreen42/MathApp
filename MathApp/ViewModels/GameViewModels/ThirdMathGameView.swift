@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ThirdMathGameView: View {
+
     var body: some View {
         VStack {
             
@@ -16,6 +17,9 @@ struct ThirdMathGameView: View {
 }
 
 
+
+
 #Preview {
     ThirdMathGameView()
+        .preferredColorScheme(.dark)
 }
