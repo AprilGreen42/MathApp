@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var isShow: Bool = true
     var body: some View {
         VStack {
+            //MARK: Depending on the value of isShow we move from SplashScreen and TabViewView
             if self.isShow {
                 SplashScreen()
                     .ignoresSafeArea(.all)
@@ -20,6 +21,7 @@ struct ContentView: View {
             }
         }
         .onAppear {
+            //MARK: Switch between true and false value of isShow
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.isShow = false
             }

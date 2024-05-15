@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 
+//MARK: Enums of types figures
 enum Figures: String, CaseIterable, Identifiable {
     case triangle = "triangle"
     case rectangle = "rectangle"
@@ -17,8 +18,11 @@ enum Figures: String, CaseIterable, Identifiable {
 }
 
 
+//MARK: View, whick call another view depending of type figure
 struct AreaFinding: View {
     var fig: Figures
+    
+    //MARK: Call views depending type of figures
     func area(_ selectedFigure: Figures) -> AnyView {
         switch selectedFigure {
         case .circle:
@@ -36,8 +40,11 @@ struct AreaFinding: View {
 }
 
 
+//MARK: View for circle type figure
 struct CircleView: View {
     @State private var radius: String = ""
+    
+    //MARK: Function for calculation area
     func areaOfFigure(r: String) -> some View {
         let radius: Double? = Double(r) ?? 0
         let areaOfCircle: Double? = 3.14 * radius! * radius!
@@ -57,9 +64,12 @@ struct CircleView: View {
 }
 
 
+//MARK: View for triangle type figure
 struct TriangleView: View {
     @State private var firstSide: String = ""
     @State private var secondSide: String = ""
+    
+    //MARK: Function for calculation area
     func areaOfFigure(_ height: String, _ width: String) -> some View {
         let width: Double? = Double(width) ?? 0
         let height: Double? = Double(height) ?? 0
@@ -85,9 +95,12 @@ struct TriangleView: View {
 }
 
 
+//MARK: View for rectangle type figure
 struct RectangleView: View {
     @State private var heightOfRectangle: String = ""
     @State private var widthOfRectangle: String = ""
+    
+    //MARK: Function for calculation area
     func areaOfFigure(_ height: String, _ width: String) -> some View {
         let width: Double? = Double(width) ?? 0
         let height: Double? = Double(height) ?? 0
@@ -114,6 +127,7 @@ struct RectangleView: View {
 }
 
 
+//MARK: View in which we show the result of finding the area of ​​a figure
 struct ShowAreaFigure: View {
     init(area: Double? = nil) {
         self.area = (area! * 1000).rounded() / 1000

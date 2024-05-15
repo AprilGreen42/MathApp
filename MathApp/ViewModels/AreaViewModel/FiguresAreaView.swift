@@ -12,12 +12,16 @@ struct FiguresAreaView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                
+                //MARK: Picker for type of figure
                 Picker("Figures", selection: $selection, content: {
                     ForEach(Figures.allCases) { fig in
                         Text(fig.rawValue.capitalized)
                             
                     }
                 })
+                
+                //MARK: If selected figure is triangle, we use right triangle, else we use usually figure
                 if selection == .triangle {
                     Image(systemName: "righttriangle")
                         .resizable()
@@ -32,7 +36,8 @@ struct FiguresAreaView: View {
                         .padding(.top, 30)
                         .padding(.bottom, 30)
                 }
-                AreaView(selectedFigure: $selection)
+                //MARK: Call for calculation area of figure
+                AreaFinding(fig: selection)
                 Spacer()
             }
             .padding(.top, 30)

@@ -13,23 +13,29 @@ struct SecondMathGameView: View {
     var body: some View {
         VStack {
             VStack {
+                
+                //MARK: Best score, which stored in Appstorage
                 Text("Best Score: \(bestScore)")
                     .bold()
                     .font(.title)
             }
             .padding(.bottom, 100)
             VStack {
+                
+                //MARK: Score stored in the current game
                 Text("Score: \(questionForSecondGame.score)")
                     .bold()
                     .font(.title)
             }
             .padding(.bottom, 100)
             
+            //MARK: Question
             Text("\(questionForSecondGame.firstValue) \(questionForSecondGame.operation) \(questionForSecondGame.secondValue) = \(questionForSecondGame.possibleAnswer)")
                 .bold()
                 .font(.title)
                 .padding(.bottom, 30)
             
+            //MARK: Buttons answers
             HStack {
                 Button(action: {
                     questionForSecondGame.corAnswer2(varAnswer: true)
@@ -61,10 +67,12 @@ struct SecondMathGameView: View {
             }
         }
         .onAppear() {
+            //MARK: Update question
             questionForSecondGame.generateQuestion()
         }
     }
     func addScore() {
+        //MARK: Add score
         if self.questionForSecondGame.score >= bestScore {
             bestScore = self.questionForSecondGame.score
         }

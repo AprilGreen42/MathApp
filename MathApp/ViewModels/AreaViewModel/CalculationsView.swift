@@ -11,7 +11,7 @@ struct CalculationsView: View {
     
     enum Calculations: String, CaseIterable, Identifiable {
     case figures = "Figures"
-    case numbers = "Numbers"
+    case numbers = "Calculator"
     var id: Self { self }
     }
     
@@ -19,11 +19,14 @@ struct CalculationsView: View {
     var body: some View {
         VStack {
             if selection == .figures {
+                //MARK: Call area calculating
                 FiguresAreaView()
             }
             else {
+                //MARK: Call simple calculator
                 CalculatorView()
             }
+            //MARK: Picker between area calculating and simple calculator
             Picker("Choice", selection: $selection, content: {
                 ForEach(Calculations.allCases) { sel in
                     Text(sel.rawValue)

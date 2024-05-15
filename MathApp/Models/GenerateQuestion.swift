@@ -9,6 +9,9 @@ import Foundation
 
 
 class Question: ObservableObject {
+    
+    //MARK: Params for question and answer
+    
     @Published var firstValue: Int
     @Published var secondValue: Int
     @Published var question: Int = 4
@@ -27,6 +30,7 @@ class Question: ObservableObject {
         self.score = 0
     }
     
+    //MARK: Function for question
     func generateQuestion() {
         self.firstValue = Int.random(in: 0...15)
         self.secondValue = Int.random(in: 0...15)
@@ -44,6 +48,7 @@ class Question: ObservableObject {
         self.possibleAnswer = Int.random(in: question-2...question+2)
     }
     
+    //MARK: Function for answers
     func generateAnswers() {
         self.answers.removeAll()
         var randElem: Int
@@ -60,12 +65,14 @@ class Question: ObservableObject {
         self.answers.shuffle()
     }
     
+    //MARK: Function to check the result for first game(FirstMathGame)
     func corAnswer(varAnswer: Int) {
         if question == varAnswer {
             score += 1
         }
     }
     
+    //MARK: Function to check the result for second game(SecondMathGame)
     func corAnswer2(varAnswer: Bool) {
         if varAnswer == true {
             if question == possibleAnswer {

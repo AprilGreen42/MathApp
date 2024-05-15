@@ -11,6 +11,8 @@ struct EncyclopediaView: View {
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
+                
+                //MARK: Links for video type
                 NavigationLink(destination: {
                     VideoForFindingArea()
                 }, label: {

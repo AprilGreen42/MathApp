@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		110A000D2BB1F85800C27E1C /* FiguresToFindArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110A000C2BB1F85800C27E1C /* FiguresToFindArea.swift */; };
-		110A000F2BB1FB6900C27E1C /* AreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110A000E2BB1FB6900C27E1C /* AreaView.swift */; };
 		110CE6E22BB0CF910054954F /* TabViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E12BB0CF910054954F /* TabViewView.swift */; };
 		110CE6E42BB0CFC40054954F /* FiguresAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */; };
 		110CE6E62BB0D2160054954F /* EncyclopediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CE6E52BB0D2160054954F /* EncyclopediaView.swift */; };
@@ -36,7 +35,6 @@
 
 /* Begin PBXFileReference section */
 		110A000C2BB1F85800C27E1C /* FiguresToFindArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresToFindArea.swift; sourceTree = "<group>"; };
-		110A000E2BB1FB6900C27E1C /* AreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaView.swift; sourceTree = "<group>"; };
 		110CE6E12BB0CF910054954F /* TabViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewView.swift; sourceTree = "<group>"; };
 		110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguresAreaView.swift; sourceTree = "<group>"; };
 		110CE6E52BB0D2160054954F /* EncyclopediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaView.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				110CE6E32BB0CFC40054954F /* FiguresAreaView.swift */,
-				110A000E2BB1FB6900C27E1C /* AreaView.swift */,
 				11C846DE2BE415E700BFF695 /* CalculationsView.swift */,
 				11C846E02BE41CB400BFF695 /* CalculatorView.swift */,
 			);
@@ -253,7 +250,6 @@
 				11D43F442BC5A2A1004D967D /* SecondMathGameView.swift in Sources */,
 				113089E32BA05D9000985021 /* SplashScreen.swift in Sources */,
 				11C846D42BE10C2400BFF695 /* YouTubePlayerModel.swift in Sources */,
-				110A000F2BB1FB6900C27E1C /* AreaView.swift in Sources */,
 				114120DD2BB9BE2300BA6967 /* GenerateQuestion.swift in Sources */,
 				11C846D62BE1156300BFF695 /* VideoForFindingArea.swift in Sources */,
 				11C846DD2BE3BE0C00BFF695 /* ViewForCalculatorButton.swift in Sources */,

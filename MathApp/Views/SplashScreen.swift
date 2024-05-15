@@ -13,6 +13,7 @@ struct SplashScreen: View {
             Image("SplashScreen")
                 .resizable()
         }
+        .ignoresSafeArea(.all)
     }
 }
 

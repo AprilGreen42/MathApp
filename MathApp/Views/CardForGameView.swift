@@ -11,6 +11,7 @@ struct CardForGameView: View {
     var gameNumber: String
     var descriptionGame: String
     var body: some View {
+        //MARK: View for game card
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .frame(width: 380, height: 200)

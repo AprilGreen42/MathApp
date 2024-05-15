@@ -10,6 +10,7 @@ import SwiftUI
 struct ButtonForAnswerView: View {
     var answer: String
     var body: some View {
+        //MARK: View for button answer
         VStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 20.0)

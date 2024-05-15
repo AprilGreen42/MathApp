@@ -7,9 +7,28 @@
 
 import SwiftUI
 
+struct CalculatorButton: View {
+    let title: String
+    let action: (String) -> Void
+  
+    var body: some View {
+        Button(action: {
+            action(title)
+        }, label: {
+            if title == "*" || title == "/" || title == "+" || title == "-" || title == "=" || title == "C" {
+                ViewForCalculatorButton(colorOFButton: .orange, text: title)
+            } else {
+                ViewForCalculatorButton(colorOFButton: .gray, text: title)
+            }
+        })
+    }
+}
+
 struct CalculatorView: View {
     @State private var display = "0"
     @State private var hasEquality = false
+    
+    //MARK: Function for calculating and displaying value
     private func buttonAction(_ input: String) {
         if input == "C" {
             display = "0"
@@ -30,12 +49,14 @@ struct CalculatorView: View {
         }
     }
     
+    //MARK: Convert an expression to a string
     private func evaluateExpression(expression: String) -> String {
         let exp = NSExpression(format: expression)
         let result = exp.expressionValue(with: nil, context: nil) as! NSNumber
         return result.stringValue
     }
-
+    
+    //MARK: Values for buttons
     let buttonRows = [
         ["7", "8", "9", "/"],
         ["4", "5", "6", "*"],
@@ -50,6 +71,7 @@ struct CalculatorView: View {
                     .font(.system(size: 45))
                     .bold()
                     .padding()
+                //MARK: Display buttons and calculation
                 ForEach(buttonRows, id: \.self) { row in
                     HStack {
                         ForEach(row, id: \.self) { title in
@@ -67,21 +89,4 @@ struct CalculatorView: View {
 
 #Preview {
     CalculatorView()
-}
-
-struct CalculatorButton: View {
-    let title: String
-    let action: (String) -> Void
-  
-    var body: some View {
-        Button(action: {
-            action(title)
-        }, label: {
-            if title == "*" || title == "/" || title == "+" || title == "-" || title == "=" || title == "C" {
-                ViewForCalculatorButton(colorOFButton: .orange, text: title)
-            } else {
-                ViewForCalculatorButton(colorOFButton: .gray, text: title)
-            }
-        })
-    }
 }

@@ -10,16 +10,15 @@ import SwiftUI
 struct CardForEncyclopediaView: View {
     var nameOfCard: String = ""
     var body: some View {
-        VStack {
-            ZStack {
-                RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                    .frame(width: .infinity, height: 200)
-                    .foregroundStyle(LinearGradient(colors: [Color("FirstColorForCard"), Color("SecondColorForCard")], startPoint: .leading, endPoint: .trailing))
-                Text(nameOfCard)
-                    .foregroundStyle(.white)
-                    .font(.title)
-                    .bold()
-            }
+        //MARK: View for card of encyclopedia
+        ZStack {
+            RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                .frame(width: .infinity, height: 200)
+                .foregroundStyle(LinearGradient(colors: [Color("FirstColorForCard"), Color("SecondColorForCard")], startPoint: .leading, endPoint: .trailing))
+            Text(nameOfCard)
+                .foregroundStyle(.white)
+                .font(.title)
+                .bold()
         }
     }
 }

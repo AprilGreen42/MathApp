@@ -11,6 +11,7 @@ struct ViewForCalculatorButton: View {
     var colorOFButton: Color = .gray
     var text: String = "1"
     var body: some View {
+        //MARK: View for calculator button
         ZStack {
             Circle()
                 .frame(width: 75)
